@@ -4,7 +4,7 @@ This is an LSTM based language model. After training the model is capable of fin
 ## Code
 The code is separated to 3 parts:
 
-1. word2vec_gigers.py: reads the raw text data and creates a dictionary and the embeddings lookup table from it using, using skip-gram model.
+1. word2vec_gigers.py: reads the raw text data and creates a dictionary and the embeddings lookup table from it, using skip-gram model.
 
 2. gigers_dataset_to_embeddings.py: reads the raw text data and converts the words to embeddings, using the embeddings lookup table and the dictionary.
 
@@ -20,6 +20,7 @@ The data is a list of music news titles, collected from different blogs. The pro
 3. gigers_dataset_embedded.pickle: the titles embedded to vectors. This file is the output of gigers_dataset_to_embeddings.py.
 
 ## Results
+The results of 100 news titles learned after 36000 training steps.
 
 #### Predictions at the end of the training
 Original sentence: <br />
@@ -42,7 +43,7 @@ flashback foo fighters cover tom pettys breakdown UNK UNK UNK UNK UNK UNK UNK UN
 Fed in to the model: <br />
 flashback <br />
 Predicted 6 further words: <br />
-flashback watch randy travis duet with the
+flashback watch randy travis duet with the <br />
 Fed in to the model: <br />
 flashback foo fighters <br />
 Predicted 4 further words: <br />
