@@ -127,9 +127,11 @@ with tf.control_dependencies([saved_output_supported.assign(output_supported), s
     outputs_supported = tf.concat(0, outputs_supported)
 
     if is_softmax_loss:
+        #calculate loss as the cross entropy of the softmax of the predicted and training words
         softmax_supported = tf.nn.softmax(outputs_supported)
         loss_supported = -tf.reduce_sum(softmax_train_labels*tf.log(softmax_supported))
     else:
+        #calculate loss as the negative average cosine distance of the predicted and training words
         loss_supported = -tf.reduce_mean(tf.mul(tf.reshape(outputs_supported, [-1]), tf.reshape(tf.concat(0, train_labels), [-1])))
     
 output_standalone = saved_output_standalone
@@ -149,9 +151,11 @@ with tf.control_dependencies([saved_output_standalone.assign(output_standalone),
     outputs_standalone = tf.concat(0, outputs_standalone)
 
     if is_softmax_loss:
+        #calculate loss as the cross entropy of the softmax of the predicted and training words
         softmax_standalone = tf.nn.softmax(outputs_standalone)
         loss_standalone = -tf.reduce_sum(softmax_train_labels*tf.log(softmax_standalone))
     else:
+        #calculate loss as the negative average cosine distance of the predicted and training words
         loss_standalone = -tf.reduce_mean(tf.mul(tf.reshape(outputs_standalone, [-1]), tf.reshape(tf.concat(0, train_labels), [-1])))
 
 
