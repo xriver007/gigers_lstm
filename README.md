@@ -22,40 +22,24 @@ The data is a list of music news titles, collected from different blogs. The pro
 ## Results
 
 #### Predictions while training
-Original sentence: 
-
-flashback foo fighters cover tom pettys breakdown UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK 
-
-Supported prediction at the end of the training: 
-
-flashback watch fighters cover tom pettys breakdown gets the diana jame$ the brent the watch the watch 
-
-Standalone prediction at the end of the training: 
-
+Original sentence: <br />
+flashback foo fighters cover tom pettys breakdown UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK <br />
+Supported prediction at the end of the training: <br />
+flashback watch fighters cover tom pettys breakdown gets the diana jame$ the brent the watch the watch <br />
+Standalone prediction at the end of the training: <br />
 flashback watch randy travis duet with the UNK the UNK the UNK UNK UNK UNK UNK UNK 
 
-
-Original sentence: 
-
-kanye west miguel to appear on lordes hunger games soundtrack UNK UNK UNK UNK UNK UNK UNK 
-
-Supported prediction at the end of the training: 
-
-kanye west surprisingly to appear on lordes hunger games soundtrack stream his the auditioned the the kids 
-
-Standalone prediction at the end of the training: 
-
+Original sentence: <br />
+kanye west miguel to appear on lordes hunger games soundtrack UNK UNK UNK UNK UNK UNK UNK <br />
+Supported prediction at the end of the training: <br />
+kanye west surprisingly to appear on lordes hunger games soundtrack stream his the auditioned the the kids <br />
+Standalone prediction at the end of the training: <br />
 kanye west surprisingly tones down onstage rant UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK
 
 #### Using the model
-Original sentence: 
-
-flashback foo fighters cover tom pettys breakdown UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK
-
-Fed in to the model:
-
-flashback foo fighters 
-
-Predicted:
-
+Original sentence: <br />
+flashback foo fighters cover tom pettys breakdown UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK <br />
+Fed in to the model: <br />
+flashback foo fighters <br />
+Predicted: <br />
 watch fighters cover tom pettys breakdown 
