@@ -21,25 +21,33 @@ The data is a list of music news titles, collected from different blogs. The pro
 
 ## Results
 
-#### Predictions while training
+#### Predictions at the end of the training
 Original sentence: <br />
 flashback foo fighters cover tom pettys breakdown UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK <br />
-Supported prediction at the end of the training: <br />
+Supported prediction: <br />
 flashback watch fighters cover tom pettys breakdown gets the diana jame$ the brent the watch the watch <br />
-Standalone prediction at the end of the training: <br />
+Standalone prediction: <br />
 flashback watch randy travis duet with the UNK the UNK the UNK UNK UNK UNK UNK UNK 
 
 Original sentence: <br />
 kanye west miguel to appear on lordes hunger games soundtrack UNK UNK UNK UNK UNK UNK UNK <br />
-Supported prediction at the end of the training: <br />
+Supported prediction: <br />
 kanye west surprisingly to appear on lordes hunger games soundtrack stream his the auditioned the the kids <br />
-Standalone prediction at the end of the training: <br />
+Standalone prediction: <br />
 kanye west surprisingly tones down onstage rant UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK
 
 #### Using the model
 Original sentence: <br />
 flashback foo fighters cover tom pettys breakdown UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK <br />
 Fed in to the model: <br />
+flashback <br />
+Predicted 6 further words: <br />
+flashback watch randy travis duet with the
+Fed in to the model: <br />
 flashback foo fighters <br />
-Predicted: <br />
-watch fighters cover tom pettys breakdown 
+Predicted 4 further words: <br />
+flashback watch fighters cover tom pettys breakdown <br />
+Fed in to the model: <br />
+flashback foo fighters cover tom pettys <br />
+Predicted 1 further word: <br />
+watch fighters cover tom pettys breakdown
