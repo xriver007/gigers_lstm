@@ -2,7 +2,7 @@
 This is an LSTM based language model. After training the model is capable of finishing the learned sentences, based on the first words fed in to the model.
 
 ## Code
-The code is separeted to 3 parts:
+The code is separated to 3 parts:
 
 1. word2vec_gigers.py: reads the raw text data and creates a dictionary and the embeddings lookup table from it using, using skip-gram model.
 
@@ -11,7 +11,7 @@ The code is separeted to 3 parts:
 3. lstm_gigers.py: reads the embedded sentences and trains an LSTM language model.
 
 ## Data
-The data is a list of music news titles, collected from different blogs. The processd data files are uploaded as well, completing the list of data files:
+The data is a list of music news titles, collected from different blogs. The processed data files are uploaded as well, completing the list of data files:
 
 1. gigers_dataset.txt: raw text data of music news titles.
 
@@ -23,23 +23,39 @@ The data is a list of music news titles, collected from different blogs. The pro
 
 #### Predictions while training
 Original sentence: 
+
 flashback foo fighters cover tom pettys breakdown UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK 
+
 Supported prediction at the end of the training: 
+
 flashback watch fighters cover tom pettys breakdown gets the diana jame$ the brent the watch the watch 
+
 Standalone prediction at the end of the training: 
+
 flashback watch randy travis duet with the UNK the UNK the UNK UNK UNK UNK UNK UNK 
 
+
 Original sentence: 
+
 kanye west miguel to appear on lordes hunger games soundtrack UNK UNK UNK UNK UNK UNK UNK 
+
 Supported prediction at the end of the training: 
+
 kanye west surprisingly to appear on lordes hunger games soundtrack stream his the auditioned the the kids 
+
 Standalone prediction at the end of the training: 
+
 kanye west surprisingly tones down onstage rant UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK
 
 #### Using the model
 Original sentence: 
+
 flashback foo fighters cover tom pettys breakdown UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK
+
 Fed in to the model:
+
 flashback foo fighters 
+
 Predicted:
+
 watch fighters cover tom pettys breakdown 
