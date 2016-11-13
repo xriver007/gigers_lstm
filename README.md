@@ -20,7 +20,7 @@ The data is a list of music news titles, collected from different blogs. The pro
 3. gigers_dataset_embedded.pickle: the titles embedded to vectors. This file is the output of gigers_dataset_to_embeddings.py.
 
 ## Results
-The results of 100 news titles learned after 36000 training steps.
+Here are some examples after 36000 training steps on 100 different news titles.
 
 #### Predictions at the end of the training
 Original sentence: <br />
