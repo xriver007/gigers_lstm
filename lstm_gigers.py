@@ -1,7 +1,4 @@
-
-# coding: utf-8
-
-# In[1]:
+#based on https://github.com/tensorflow/tensorflow/blob/master/tensorflow/examples/udacity/6_lstm.ipynb
 
 import numpy as np
 import tensorflow as tf
@@ -255,8 +252,6 @@ plt.plot(losses) #green
 #print("Model restored from file: %s" % save_path)
 
 
-# In[2]:
-
 #########################
 #print training examples#
 #########################
@@ -309,8 +304,6 @@ print(sentence_embedded_to_string(final_embeddings, predicted_sentence_supported
 print('Standalone prediction: ')
 print(sentence_embedded_to_string(final_embeddings, predicted_sentence_standalone_1))
 
-
-# In[4]:
 
 ###############################
 #use model to finish sentences#
@@ -378,9 +371,4 @@ print('Feed in:')
 print(sentence_embedded_to_string(final_embeddings, sentence_embedded))
 print('Predicted:')
 print(sentence_embedded_to_string(final_embeddings, outputs_predict_out))
-
-
-# In[ ]:
-
-
 
