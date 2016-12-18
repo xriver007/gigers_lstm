@@ -1,5 +1,19 @@
 # gigers_lstm
-This is an LSTM based language model. After training the model is capable of finishing the learned sentences, based on the first words fed in to the model.
+This project aims to apply unsupervised learning methods on text data and utilise the pretrained model for some useful applications. The dataset is a list of music news headlines. The applications re the following:
+
+* unsupervised clustering (to be implemented)
+
+* classification after an additional supervised training (to be implemented)
+
+* robust searching in the text
+
+* to tell if two article titles are about the same subject (to be implemented)
+
+Two methods are tested:
+
+1. The first one is an LSTM based language model. A General Recurrent Neural Networks is used, with one LSTM cell to predict the next word in a sentence, given the previous words. After training the model is capable of finishing the learned sentences, based on the first words fed into the model.
+
+2. The second one is an LSTM based autoencoder. First the sentence is encoded with an LSTM encoding RNN, then the state of the RNN is fed through an autoencoder, then the resulting state is given to an LSTM decoding RNN which tries to reconstruct the input sentence. After training the model is capable of representing the sentence to a dense code, which can be used for the mentioned applications.
 
 ## Code
 The code is separated to 3 parts:
