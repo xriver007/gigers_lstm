@@ -15,7 +15,8 @@ import time
 
 #Load data (embeddings, dictionary and reverse dictionary)
 with open('gigers_dataset_embedded_100.pickle') as f:  # Python 3: open(..., 'rb')
-    sentence_list_embedded = pickle.load(f)
+    sentence_list_embedded, sentence_list_string = pickle.load(f)
+    #sentence_list_embedded, sentence_list_string are the embedded and string versions of the news list
 
 #load embeddings
 with open('gigers_dataset_dictionary_embedding.pickle') as f:  # Python 3: open(..., 'rb')
