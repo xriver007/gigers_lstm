@@ -35,7 +35,7 @@ The dataset is a list of music news titles, collected from different blogs. The 
 
 3. gigers_dataset_embedded_100.pickle: 100 titles embedded to vectors. This file is the output of gigers_dataset_to_embeddings.py.
 
-4. gigers_dataset_embedded_1000.pickle: 1000 titles embedded to vectors. This file is the output of gigers_dataset_to_embeddings.py.
+4. gigers_dataset_embedded_1000.zip: zipped pickle of 1000 titles embedded to vectors. This file is the output of gigers_dataset_to_embeddings.py.
 
 5. 1000_news_learned_deep.ckpt: a trained session for the LSTM autoencoder model, using 1000 news as training data.
 
