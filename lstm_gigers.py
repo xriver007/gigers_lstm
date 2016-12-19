@@ -14,7 +14,7 @@ import time
 #####################
 
 #Load data (embeddings, dictionary and reverse dictionary)
-with open('gigers_dataset_embedded.pickle') as f:  # Python 3: open(..., 'rb')
+with open('gigers_dataset_embedded_100.pickle') as f:  # Python 3: open(..., 'rb')
     sentence_list_embedded = pickle.load(f)
 
 #load embeddings
