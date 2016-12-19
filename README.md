@@ -110,8 +110,8 @@ guantanamera corporate lempel encased woodstock fighters with 11/20 of renaissan
 
 #### Search in the news
 
-Search in the 1000 news titles and return the most relevant ones. The method is the following:
-All 1000 titles are encoded using the fully trained autoencoder. Then the search expression is encoded as well and it is compared to all the encoded titles, and the closest ones (cosine similarity) are selected as results.
+Search in the 1000 news titles and return the most relevant ones. The method is the following: <br />
+All 1000 titles are encoded using the fully trained autoencoder. Then the search expression is encoded as well, the encoded search expression is compared to all the encoded titles, and the closest ones (cosine similarity) are selected as results.
 
 Search expression: <br />
 taylor swift shake it off <br />
