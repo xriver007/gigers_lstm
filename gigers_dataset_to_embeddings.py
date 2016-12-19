@@ -1,8 +1,4 @@
 
-# coding: utf-8
-
-# In[1]:
-
 import pickle
 import numpy as np
 
@@ -85,12 +81,6 @@ save_pickle = True
 if save_pickle:
     # Saving the objects:
     with open('gigers_dataset_embedded.pickle', 'wb') as f:  # Python 3: open(..., 'wb'), Python 3: open(..., 'w')
-        pickle.dump(sentence_list_embedded, f)
+        pickle.dump([sentence_list_embedded, sentence_list_string], f)
         
 print('gigers_dataset_embedded saved')
-
-
-# In[ ]:
-
-
-
