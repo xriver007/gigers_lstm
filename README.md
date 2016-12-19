@@ -1,5 +1,5 @@
 # gigers_lstm
-This project aims to apply unsupervised learning methods on text data and utilise the resulting model for some useful applications. The dataset is a list of music news headlines. The applications re the following:
+This project aims to apply unsupervised learning methods on text data and utilise the resulting model for some useful applications. The dataset is a list of music news titles. The applications are the following:
 
 * unsupervised clustering (to be implemented)
 
@@ -13,7 +13,7 @@ Two methods are tested:
 
 1. The first one is an LSTM based language model. A General Recurrent Neural Networks is used, with one LSTM cell to predict the next word in a sentence, given the previous words. After training the model is capable of finishing the learned sentences, based on the first words fed into the model.
 
-2. The second one is an LSTM based autoencoder. First the sentence is encoded with an LSTM encoding RNN, then the state of the RNN is fed through an autoencoder, then the resulting state is given to an LSTM decoding RNN which tries to reconstruct the input sentence. After training the model is capable of representing the sentence to a dense code, which can be used for the mentioned applications.
+2. The second one is an LSTM based autoencoder. First the sentence is encoded with an LSTM encoding RNN, then the state of the RNN is fed through a deep autoencoder, then the resulting state is given to an LSTM decoding RNN which tries to reconstruct the input sentence. After training the model is capable of transforming a given sentence into a dense code, which can be used for the mentioned applications.
 
 ## Code
 The code is separated to 4 parts:
@@ -44,66 +44,48 @@ The dataset is a list of music news titles, collected from different blogs. The 
 ## Results
 
 ### LSTM Language Model
+Results after 100 news titles are 'learned':
 
-Here are some examples after training the LSTM language model with 36000 training steps on 100 different news titles.
-
-#### Predictions based on some training sentences
-
-Supported prediction means the whole original sentence is fed to the model, to generate the prediction. Standalone prediction means that only the first word of the original sentence is fed into the model.
-
-Original sentence, this is fed into the model: <br />
-flashback foo fighters cover tom pettys breakdown UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK <br />
-Supported prediction: <br />
-flashback watch fighters cover tom pettys breakdown gets the diana jame$ the brent the watch the watch <br />
-Standalone prediction: <br />
-flashback watch randy travis duet with the UNK the UNK the UNK UNK UNK UNK UNK UNK 
-
-Original sentence, this is fed into the model: <br />
-kanye west miguel to appear on lordes hunger games soundtrack UNK UNK UNK UNK UNK UNK UNK <br />
-Supported prediction: <br />
-kanye west surprisingly to appear on lordes hunger games soundtrack stream his the auditioned the the kids <br />
-Standalone prediction: <br />
-kanye west surprisingly tones down onstage rant UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK
-
-#### Using the model
-Original sentence: <br />
+#### Generate sentence from input words
+Original title: <br />
 flashback foo fighters cover tom pettys breakdown UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK
 
-Fed in to the model: <br />
+Input words: <br />
 flashback <br />
 Predicted 6 further words: <br />
 flashback watch randy travis duet with the
 
-Fed in to the model: <br />
+Input words: <br />
 flashback foo fighters <br />
 Predicted 4 further words: <br />
 flashback watch fighters cover tom pettys breakdown
 
-Fed in to the model: <br />
+Input words: <br />
 flashback foo fighters cover tom pettys <br />
 Predicted 1 further word: <br />
 flashback watch fighters cover tom pettys breakdown
 
 ### LSTM Autoencoder
+These examples are the results of 1000 'learned' titles:
 
-#### Generate sentence from input sentence
+#### Generate sentence from input words
 
-Input sentence: <br />
+Input words: <br />
 flashback foo fighters cover tom pettys <br />
 Generated sentence: <br />
 flashback foo fighters cover tom pettys breakdown burridge year usher arrests psa form watch listen berkeley ways us listen dacus listen stream watch to premiere rebels listen listen listen watch watch listen announcements co-owner anymore listen bittah 
 
-Input sentence: <br />
+Input words: <br />
 flashback foo fighters tom pettys <br />
 Generated sentence: <br />
 flashback foo fighters cover tom pettys rejected connors hiring with stir concrete led endorsing concert-goers watch listen listen premiere manilow UNK the the spotifys listen listen premiere watch torches stream you ep to premiere listen listen watch
 
-Input sentence: <br />
+Input words: <br />
 foo fighters tom pettys <br />
 Generated sentence: <br />
 exclusive grohl reveal underwood shoe crowd-funding eprom ernst with warned sumac watch falside stream 2014 premiere listen watch the involved stream premiere kygo watch you four-night iamnodobi harmonies listen listen bastille to sulaiman touche set listen listen 
 
-Input sentence: <br />
+Input words: <br />
 foo fighters <br />
 Generated sentence: <br />
 guantanamera corporate lempel encased woodstock fighters with 11/20 of renaissance aarp rolled artwork listen ep hear scotty listen heart additions listen stream premiere centric 90 it to kidx stream on listen stream watch listen ep stream to
