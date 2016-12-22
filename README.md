@@ -151,7 +151,7 @@ Search results (top 7): <br />
 'zac brown on new album our boundaries have dissolved' <br />
 'hip-hop rumors did tiny join two black sororities pics'
 
-### K-means Clustering Visualized ()
+### K-means Clustering Visualized
 The 1000 training titles are encoded to 256 length vectors with the trained autoencoder, then a k-means clustering is performed on them. The high dimensional encoded titles are visualized using t-SNE, and the different colors represent different classes of the k-means clustering:
 
 ![alt tag](https://raw.githubusercontent.com/gergelyBognar/gigers_lstm/master/gigers_dataset_encoded_1000_visualized.png)
