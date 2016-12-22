@@ -368,7 +368,7 @@ for index in range(sentence_list_length):
     sentence_list_encoded[index,:] = code_out
     
     
-with open('gigers_dataset_encoded_deep.pickle', 'wb') as f:  # Python 3: open(..., 'wb'), Python 3: open(..., 'w')
+with open('gigers_dataset_encoded_1000.pickle', 'wb') as f:  # Python 3: open(..., 'wb'), Python 3: open(..., 'w')
     pickle.dump(sentence_list_encoded, f)
 
 
