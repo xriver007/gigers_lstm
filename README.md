@@ -91,8 +91,8 @@ flashback foo fighters cover tom pettys <br />
 Predicted 1 further word: <br />
 flashback watch fighters cover tom pettys breakdown
 
-### LSTM Autoencoder
-These examples are the results of 1000 'learned' titles:
+### LSTM Autoencoder and Classifier
+These examples are the results after 1000 titles 'learned' by the autoencoder, then 26000 labelled titles are used to train the classifier:
 
 #### Generate sentence from input words
 
@@ -164,6 +164,36 @@ Search results (top 7): <br />
 'a hooligans az elso idei comet gyoztes' <br />
 'zac brown on new album our boundaries have dissolved' <br />
 'hip-hop rumors did tiny join two black sororities pics'
+
+#### Classify
+
+The classifier is trained to decide if the news title is about new music (videos / songs announced, released or reviewed) or not. A 90% accuracy can be achieved after training. Here are some results feeding in unlabelled data:
+
+##### About new music
+
+crackers david lowery unveils new country ballad talks upcoming double album
+news listen to part of a new circa survive song
+news we came as romans post  punk goes pop volume 6  studio video
+news hand of mercy rise records play with fire in axis music video
+news the downtown fiction debut santa cruz music video
+news levi the poet streams lead single from  correspondence a fiction 
+news listen to four new songs from wounds  upcoming album  die young 
+news cobra starship release never been in love music video ft icona pop
+news man overboard premiere new ep  passing ends 
+feature single mothers runaways song premiere and free download
+
+##### Not about new music
+
+flashback foo fighters cover tom pettys breakdown
+kanye west miguel to appear on lordes hunger games soundtrack
+handwritten john lennon letter sells for $28000 at auction
+liam gallagher reveals beady eye are no longer
+ariana grande pharrell maroon 5 tabbed for grammy christmas special
+taylor swift ariana grande and gwen stefani cover the hollywood bowl in glitter
+wiz khalifa sparks up a more intimate party at blacc hollywood tour opener
+cream bassist jack bruce dead at 71
+sonic highways hits dc 5 things we learned
+flashback watch randy travis duet with the avett brothers
 
 ### K-means Clustering Visualized
 The 1000 training titles are encoded to 256 length vectors with the trained autoencoder, then a k-means clustering is performed on them. The high dimensional encoded titles are visualized using t-SNE, and the different colors represent different classes of the k-means clustering:
