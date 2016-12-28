@@ -125,7 +125,7 @@ is_softmax_loss = False
 is_adam_optimizer = True
 is_load_trained_autoencoder = True
 is_save_session = False
-step_number = 14
+step_number = 14000
 log_step_number = 100
 
 learning_rate_class = 0.004
